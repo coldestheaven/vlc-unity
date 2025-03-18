@@ -6,12 +6,12 @@
 
 namespace {
 
-static const int imageWidth = 600;
-static const int imageHeight = 180;
+static const int imageWidth = 0;
+static const int imageHeight = 0;
 
 static const float xOffset = -1.f;
 static const float yOffset = 1.f;
-static const float scale = 2.0f;
+static const float scale = 0.0f;
 
 void checkCompileErrors(GLuint shader, std::string type)
 {
