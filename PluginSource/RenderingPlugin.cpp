@@ -184,16 +184,6 @@ libvlc_unity_get_texture(libvlc_media_player_t* mp, unsigned width, unsigned hei
 {
     *updated = false;
 
-    if(mp == NULL)
-    {
-        DEBUG("Error, mp == null !!!");
-    }
-
-    if(mp != NULL && !libvlc_media_player_is_playing(mp))
-    {
-         DEBUG("Error, libvlc_media_player_is_playing == false !!!");
-    }
-
     if(mp == NULL || !libvlc_media_player_is_playing(mp))
     {
         return NULL;
@@ -204,7 +194,8 @@ libvlc_unity_get_texture(libvlc_media_player_t* mp, unsigned width, unsigned hei
 
     RenderAPI* s_CurrentAPI = contexts.find(mp)->second;
 
-    if (!s_CurrentAPI) {
+    if (!s_CurrentAPI) 
+    {
         DEBUG("Error, no Render API");
         if (updated)
             *updated = false;
